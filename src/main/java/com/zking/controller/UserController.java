@@ -13,7 +13,6 @@ public class UserController {
 
     @RequestMapping("/login")
     public String login(User user){
-        //先获取主体对象
         Subject subject = SecurityUtils.getSubject();
         UsernamePasswordToken token=new UsernamePasswordToken(user.getUsername(),user.getPassword());
         boolean f=true;
